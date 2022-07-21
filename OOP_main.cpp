@@ -59,4 +59,8 @@ void cobaOopMahasiswa() {
 	database.save(mahasiswa);
 	cout << "Data " << mahasiswa.nama << " berhasil disimpan" << endl;
 	cout << "Tekan enter untuk melanjutkan..."; getch();
+
+	system("cls");
+	database.printAllData();
+	cout << "Tekan enter untuk melanjutkan..."; getch();
 }
