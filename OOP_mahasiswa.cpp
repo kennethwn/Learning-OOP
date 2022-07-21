@@ -55,6 +55,20 @@ class DataBase {
 			DataBase::out << data.getAllData();
 			DataBase::out.close();
 		}
+
+		void printAllData() {
+			string data;
+			DataBase::in.open(DataBase::fileName,ios::in);
+			int i = 1;
+
+			while(!DataBase::in.eof()) {
+				DataBase::in >> data;
+				cout << "Mahasiswa " << i << endl;
+				cout << data << endl << endl;
+				i++;
+			}
+			DataBase::in.close();
+		}
 };
 
 #endif
