@@ -53,6 +53,7 @@ class DataBase {
 		void save(Mahasiswa data) {
 			DataBase::out.open(DataBase::fileName,ios::app);
 			DataBase::out << data.getAllData();
+			DataBase::out.close();
 		}
 };
 
